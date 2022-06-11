@@ -1,2 +1,1 @@
-# graphcms-boilerplate
-GraphCMS Boilerplate
+PGM4 PLATFORM PROJECT

@@ -12,7 +12,7 @@ const Header = () => {
         expand="md"
         light
       >
-        <NavbarBrand tag={RRNavLink} to="/home">
+        <NavbarBrand tag={RRNavLink} to="/">
           PGM Platform
         </NavbarBrand>
         <NavbarToggler onClick={function noRefCheck(){}} />

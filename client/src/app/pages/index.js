@@ -1,11 +1,15 @@
-import CommunitiesPage from "./communities.page";
 import HomePage from "./home.page";
-import PostDetailsPage from "./post-details.page";
-import PostsPage from "./posts.page";
+import CurriculumPage from "./curriculum.page";
+import WorkPlaceLearningPage from "./workplacelearning.page";
+import BlogsPage from "./blogs.page";
+import TeamPage from "./team.page";
+import PortfolioPage from "./portfolio.page";
 
 export {
-  CommunitiesPage,
+  PortfolioPage,
   HomePage,
-  PostDetailsPage,
-  PostsPage,
+  WorkPlaceLearningPage,
+  CurriculumPage,
+  TeamPage,
+  BlogsPage,
 }

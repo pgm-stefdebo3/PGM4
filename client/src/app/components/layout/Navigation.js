@@ -4,19 +4,29 @@ import { NavbarText, Nav, NavItem, NavLink } from 'reactstrap';
 
 const routes = [
   {
-    title: 'Communities',
+    title: 'Curriculum',
     type: 'internal',
-    path: '/communities'
+    path: '/curriculum'
   },
   {
-    title: 'Posts',
+    title: 'Blogs',
     type: 'internal',
-    path: '/posts'
+    path: '/blogs'
   },
   {
-    title: 'Contact',
+    title: 'Portfolio',
     type: 'internal',
-    path: '/contact'
+    path: '/portfolio'
+  },
+  {
+    title: 'WPL',
+    type: 'internal',
+    path: '/workplacelearning'
+  },
+  {
+    title: 'Team',
+    type: 'internal',
+    path: '/team'
   }
 ];
 

@@ -5,20 +5,22 @@ import {
 import { Spinner } from 'reactstrap';
 
 // Custom components
-import { PostsListComponent } from '../components/posts';
 
 // GraphQL queries
-const POSTS = gql`
-query GetPosts {
-  posts {
+const CURRICULUMS = gql`
+query GetCurriculum {
+  curriculum {
     id
     title
+    code
+    schoolYear
+    periodAmount
   }
 }
 `;
 
-const PostsPage = () => {
-  const { loading, error, data } = useQuery(POSTS);
+const CurriculumPage = () => {
+  const { loading, error, data } = useQuery(CURRICULUMS);
 
   const gqlResult = () => {
     if (loading) return <Spinner
@@ -31,15 +33,15 @@ const PostsPage = () => {
     if (error) return <p>Error :(</p>;
 
     return (
-      <PostsListComponent posts={data.posts} />
+      <p> yo </p>
     );
   };
 
   return (
     <>
-      {gqlResult()}
+      yo
     </>
   )
 };
 
-export default PostsPage;
+export default CurriculumPage;

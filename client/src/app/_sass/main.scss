@@ -38,3 +38,8 @@ $headings-font-family: 'Ubuntu', sans-serif;
 @import "~bootstrap/scss/utilities/api";
 
 // 8. Add additional custom code here
+
+.btn.btn-secondary.active {
+    background-color: black;
+    color: white;
+}

@@ -13,7 +13,14 @@ import {
 import App from './app';
 
 // Utilities
-import { CommunitiesPage, HomePage, PostDetailsPage, PostsPage } from './app/pages';
+import { 
+  PortfolioPage,
+  HomePage,
+  WorkPlaceLearningPage,
+  CurriculumPage,
+  TeamPage,
+  BlogsPage,
+} from './app/pages';
 import { AuthProvider, GraphCMSProvider } from './app/context';
 import { AdminLayout, PublicLayout, UserLayout } from './app/components/layout';
 
@@ -25,17 +32,19 @@ ReactDOM.render(
           <Route element={<App />}>
             <Route path="/" element={<PublicLayout />}>
               <Route index element={<HomePage />} />
-              <Route path="posts" element={<PostsPage />} />  
-              <Route path="posts/:postId" element={<PostDetailsPage />} />
-              <Route path="communities" element={<CommunitiesPage />} /> 
+              <Route path="curriculum" element={<CurriculumPage />} />
+              <Route path="portfolio" element={<PortfolioPage />} /> 
+              <Route path="workplacelearning" element={<WorkPlaceLearningPage />} /> 
+              <Route path="team" element={<TeamPage />} /> 
+              <Route path="blogs" element={<BlogsPage />} /> 
             </Route>            
             <Route path="user" element={<UserLayout />}>
               <Route index element ={<HomePage/>} />
-              <Route path="profile" element ={<PostsPage/>} />
+              <Route path="profile" element ={<CurriculumPage/>} />
             </Route>
             <Route path="admin" element={<AdminLayout />}>
               <Route index element ={<HomePage/>} />
-              <Route path="posts" element ={<PostsPage/>} />
+              <Route path="posts" element ={<CurriculumPage/>} />
             </Route>
             <Route
                 path="*"
