@@ -1,4 +1,4 @@
-import TeamList from "../components/team/TeamList";
+import { TeamList } from "../components";
 
 const TeamPage = () => {
   return (

@@ -1,3 +1,2 @@
-import MembersList from "./team-list";
-
-export default MembersList;
+import TeamList from "./TeamList.js";
+export default TeamList;
