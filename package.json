@@ -11,12 +11,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pgmgent-pgm-4/graphcms-boilerplate.git"
+    "url": "git+https://github.com/pgm-stefdebo3/PGM4"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/pgmgent-pgm-4/graphcms-boilerplate/issues"
   },
-  "homepage": "https://github.com/pgmgent-pgm-4/graphcms-boilerplate#readme"
+  "homepage": "https://github.com/pgm-stefdebo3/PGM4#readme"
 }
