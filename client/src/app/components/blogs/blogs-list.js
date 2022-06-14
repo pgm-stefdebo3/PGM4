@@ -1,4 +1,5 @@
 import { gql, useQuery } from "@apollo/client";
+import { NavLink } from "react-router-dom";
 
 import { ListGroup, ListGroupItem } from 'reactstrap';
 import PostsListComponent from "./posts-list.component";
@@ -11,6 +12,7 @@ query GetAllBlogs {
     description
     createdAt
     posts {
+      id
       title
     }
   }
@@ -32,7 +34,7 @@ const BlogsList = () => {
         <ListGroup>
         {data && data.blogs && data.blogs.map(blog => 
           <ListGroupItem key={ blog.id }>
-            <h2>{ blog.name }</h2>
+            <NavLink to={`${blog.id}`}><h2>{ blog.name }</h2></NavLink>
             <p>{ blog.description }</p>
             <PostsListComponent posts={blog.posts}/>
           </ListGroupItem>

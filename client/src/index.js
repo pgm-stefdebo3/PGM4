@@ -20,9 +20,11 @@ import {
   CurriculumPage,
   TeamPage,
   BlogsPage,
+  BlogDetailsPage,
+  PostDetailsPage,
 } from './app/pages';
 import { AuthProvider, GraphCMSProvider } from './app/context';
-import { AdminLayout, PublicLayout, UserLayout } from './app/components/layout';
+import { PublicLayout } from './app/components/layout';
 
 ReactDOM.render(
   <GraphCMSProvider>
@@ -36,15 +38,9 @@ ReactDOM.render(
               <Route path="portfolio" element={<PortfolioPage />} /> 
               <Route path="workplacelearning" element={<WorkPlaceLearningPage />} /> 
               <Route path="team" element={<TeamPage />} /> 
-              <Route path="blogs" element={<BlogsPage />} /> 
-            </Route>            
-            <Route path="user" element={<UserLayout />}>
-              <Route index element ={<HomePage/>} />
-              <Route path="profile" element ={<CurriculumPage/>} />
-            </Route>
-            <Route path="admin" element={<AdminLayout />}>
-              <Route index element ={<HomePage/>} />
-              <Route path="posts" element ={<CurriculumPage/>} />
+              <Route path="blogs" element={<BlogsPage />} />
+              <Route path="blogs/:blogId" element={<BlogDetailsPage />}/>
+              <Route path="posts/:postId" element={<PostDetailsPage />}/>
             </Route>
             <Route
                 path="*"

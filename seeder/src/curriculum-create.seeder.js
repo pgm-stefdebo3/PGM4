@@ -71,11 +71,11 @@ import { mutationCreateEducation, mutationCreateSpecialisation, mutationCreateLe
         {name: "Interactive Media Development"}
       ]
       const learnLines =  [
-        {name: "Business & Communication", code: "CGR", color:{ hex: '#29158a' }},
-        {name: "Applied Information Technology", code: "DDW", color:{ hex: '#29158a' }},
-        {name: "Creative Design & Development", code: "OPR", color:{ hex: '#29158a' }},
-        {name: "Computer Programming", code: "TDP", color:{ hex: '#29158a' }},
-        {name: "Workplace Learning", code: "IDC", color:{ hex: '#29158a' }},
+        {name: "Business & Communication", code: "CGR", color:{ hex: '#00a5d9' }},
+        {name: "Applied Information Technology", code: "DDW", color:{ hex: '#5ab946' }},
+        {name: "Creative Design & Development", code: "OPR", color:{ hex: '#f58732' }},
+        {name: "Computer Programming", code: "TDP", color:{ hex: '#d20082' }},
+        {name: "Workplace Learning", code: "IDC", color:{ hex: '#ed0034' }},
       ]
 
       promises.push(await createEducation({ name, code, description, schoolYear}));
