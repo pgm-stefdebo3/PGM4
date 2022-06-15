@@ -12,7 +12,6 @@ const login = (req, res, next) => {
       }
 
       const userPayload = {
-        id: user.id,
         username: user.username,
         email: user.email,
       };
@@ -34,19 +33,23 @@ const login = (req, res, next) => {
   })(req, res, next);
 };
 
-// export const logoff = (req, res, next) => {
-//   try {
-//     // Get query parameters
-//     const { itemsPerPage, currentPage } = req.query;
-//     // Get users from service
-//     const users = dataService.getUsers(itemsPerPage, currentPage);
-//     // Send response
-//     res.status(200).json(users);
-//   } catch (error) {
-//     handleHTTPError(error, next);
-//   }
-// };
+const logout = (req, res, next) => {
+  try {
+    req.logout();
+    req.session.destroy((err) => {
+      if (err) {
+        return next(err);
+      }
+
+      // destroy session data
+      req.session = null;
+    });
+  } catch (error) {
+    handleHTTPError(error, next);
+  }
+};
 
 export default {
   login,
+  logout,
 };

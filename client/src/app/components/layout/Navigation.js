@@ -1,6 +1,7 @@
 import { Fragment } from 'react';
 import { NavLink as RRNavLink } from 'react-router-dom';
 import { NavbarText, Nav, NavItem, NavLink } from 'reactstrap';
+import UserContextNavigation from '../auth/UserContextNavigation';
 
 const routes = [
   {
@@ -45,10 +46,8 @@ const Navigation = () => {
           </NavItem>
         )}
       </Nav>
-      <NavLink to={'/auth/login'}>
-        Login
-      </NavLink>
-    </>
+      <UserContextNavigation/>
+      </>
   )
 };
 
