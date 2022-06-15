@@ -18,10 +18,10 @@ import { mutationCreateMember, mutationCreatePortfolio } from './ql/Mutators';
   /*
    * Create a User (Local Provider)
   */
-  const createUser = async ({ email, password, firstname, lastname, role, about, imageUrl }) => {
+  const createUser = async ({ email, userName, password, firstname, lastname, role, about, imageUrl }) => {
     try {
       const { createPortfolio } = await client.request(mutationCreatePortfolio, { firstname, lastname, about, imageUrl });
-      const { createMember } = await client.request(mutationCreateMember, { email, password, role, portfolioId: createPortfolio.id });
+      const { createMember } = await client.request(mutationCreateMember, { email, userName, password, role, portfolioId: createPortfolio.id });
 
       if (!createMember) {
         throw new Error(`Can't create the user with username ${createMember.email}!`);
@@ -45,7 +45,7 @@ import { mutationCreateMember, mutationCreatePortfolio } from './ql/Mutators';
       const randomRole = roles[faker.datatype.number({min: 0, max: roles.length - 1})]
       const ast = await htmlToSlateAST(getRandomBody(generateValueBetweenMinAndMax(1, 3))); 
 
-      promises.push(await createUser({ email: faker.internet.email(firstName, lastName), password: 'w84pgmGent', firstname: firstName, lastname: lastName, role: randomRole, about: { children: ast } , imageUrl: faker.image.avatar()}));
+      promises.push(await createUser({ email: faker.internet.email(firstName, lastName), userName: faker.internet.userName(firstName ,lastName), password: 'w84pgmGent', firstname: firstName, lastname: lastName, role: randomRole, about: { children: ast } , imageUrl: faker.image.avatar()}));
     }
     return await Promise.all(promises);
   };

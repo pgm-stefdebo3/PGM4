@@ -8,7 +8,6 @@ const FilteredTeamList = (members) => {
   const [filterText, setFilterText] = useState('');
   const [filterRole, setFilterRole] = useState('All');
   const [filteredMembers, setFilteredMembers] = useState(members.member);
-  console.log(members)
 
   // Filter members by name and role on mount, mounts every time members, filterText or filterRole changes
   useEffect(() => {
@@ -23,16 +22,12 @@ const FilteredTeamList = (members) => {
 
   // function to handle filter text changes
   const handleOnFilterTextChange = (v) => {
-    console.log(v);
     setFilterText(v);
-    console.log(filterText)
   };
 
   // function to handle filter role changes
   const handleOnFilterRoleChange = (v) => {
-    console.log(v);
     setFilterRole(v);
-    console.log(filterRole)
   };
 
 

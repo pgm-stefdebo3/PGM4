@@ -11,14 +11,14 @@ const AuthProvider = ({children}) => {
     localStorage.setItem('react-boilerplate-pgm-4:currentUser', JSON.stringify(currentUser));
   }, [currentUser]);
 
-  const signInWithEmailAndPassword = async (email, password) => {
+  const signInWithEmailAndPassword = async (userName, password) => {
     try {
       const response = await fetch('/api/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          username: email,
-          password: password,
+          userName,
+          password
         })
       });
       const user = await response.json();      
@@ -26,6 +26,7 @@ const AuthProvider = ({children}) => {
         setCurrentUser(user);      
       }      
     } catch (error) {
+      console.log(JSON.parse(error));
       console.log(error);
     }    
   };

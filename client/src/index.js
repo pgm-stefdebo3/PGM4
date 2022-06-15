@@ -22,6 +22,7 @@ import {
   BlogsPage,
   BlogDetailsPage,
   PostDetailsPage,
+  LoginPage
 } from './app/pages';
 import { AuthProvider, GraphCMSProvider } from './app/context';
 import { PublicLayout } from './app/components/layout';
@@ -34,6 +35,7 @@ ReactDOM.render(
           <Route element={<App />}>
             <Route path="/" element={<PublicLayout />}>
               <Route index element={<HomePage />} />
+              <Route path="/auth/login" element={<LoginPage />} />
               <Route path="curriculum" element={<CurriculumPage />} />
               <Route path="portfolio" element={<PortfolioPage />} /> 
               <Route path="workplacelearning" element={<WorkPlaceLearningPage />} /> 

@@ -45,9 +45,9 @@ const Navigation = () => {
           </NavItem>
         )}
       </Nav>
-      <NavbarText>
-        Simple Text
-      </NavbarText>
+      <NavLink to={'/auth/login'}>
+        Login
+      </NavLink>
     </>
   )
 };

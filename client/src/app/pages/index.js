@@ -6,6 +6,7 @@ import TeamPage from "./team.page";
 import PortfolioPage from "./portfolio.page";
 import BlogDetailsPage from "./blog-detail.page";
 import PostDetailsPage from "./post-detail.page";
+import LoginPage from "./login.page";
 
 export {
   PortfolioPage,
@@ -15,5 +16,6 @@ export {
   TeamPage,
   BlogsPage,
   BlogDetailsPage,
-  PostDetailsPage
+  PostDetailsPage,
+  LoginPage
 }

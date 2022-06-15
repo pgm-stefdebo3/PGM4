@@ -10,7 +10,6 @@ query GetAllBlogs {
     id
     name
     description
-    createdAt
     posts {
       id
       title

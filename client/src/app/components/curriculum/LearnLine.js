@@ -1,7 +1,7 @@
 
 const LearnLine = ({ courses, color }) => {
 
-  const style = { color: color}
+  const style = { "background-color": color}
 
   let coursesByLearnLine = courses
   for ( let i = 1; i < 9; i += 1) {
@@ -24,7 +24,7 @@ const LearnLine = ({ courses, color }) => {
         return <td><div className="emptyCourse" style={style}></div></td>
       } else {
         return <td><div className="course" style={style}>
-          <h5>{c.title}</h5>
+          <p>{c.title}</p>
         </div></td>
       }
     })}

@@ -6,19 +6,19 @@ import { useAuth } from './context';
 import './App.scss';
 
 function App() {
-  // const { currentUser, signInWithEmailAndPassword} = useAuth();  
+  const { currentUser, signInWithEmailAndPassword} = useAuth();  
 
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     await signInWithEmailAndPassword('Eileen39', 'w84pgmGent');
-  //   }
-  //   fetchData();
+  useEffect(() => {
+    const fetchData = async () => {
+      await signInWithEmailAndPassword('Ebony_Huels68@yahoo.com', 'w84pgmGent');
+    }
+    fetchData();
 
-  // }, []);
+  }, []);
 
-  // useEffect(() => {
-  //   console.log(currentUser);
-  // }, [currentUser]);
+  useEffect(() => {
+    console.log(currentUser);
+  }, [currentUser]);
 
   return (
     <div className="app">  
