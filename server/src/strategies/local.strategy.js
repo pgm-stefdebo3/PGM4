@@ -9,7 +9,7 @@ import { HTTPError } from '../utils';
 const localStrategy = () => {
   const queryGetUserByUsername = `
     query getUserByUsername($username: String!) {
-      authUser(where: { username: $username }) {
+      member(where: { username: $username }) {
         id,
         username,
         email,
@@ -35,14 +35,14 @@ const localStrategy = () => {
     },
     async (username, password, done) => {
       try {  
-        const { authUser } = await client.request(queryGetUserByUsername, { username });
+        const { member:authUser } = await client.request(queryGetUserByUsername, { username });
 
         if (!authUser) {
-          throw new HTTPError('User does no exists', 404);
+          throw new HTTPError('User does no exists', 469);
         }
 
         if (password !== authUser.password) {
-          throw new HTTPError('Incorrect Credentials', 404);
+          throw new HTTPError('Incorrect Credentials', 469);
         }
 
         done(null, authUser);
