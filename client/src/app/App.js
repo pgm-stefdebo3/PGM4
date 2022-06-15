@@ -10,7 +10,7 @@ function App() {
 
   useEffect(() => {
     const fetchData = async () => {
-      await signInWithEmailAndPassword('Ebony_Huels68@yahoo.com', 'w84pgmGent');
+      await signInWithEmailAndPassword('Schuyler_Greenfelder49', 'w84pgmGent');
     }
     fetchData();
 

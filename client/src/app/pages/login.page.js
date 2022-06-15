@@ -3,7 +3,7 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../context";
 
 const LoginPage = () => {
-  const Auth = useContext(AuthContext)
+  const Auth = useContext(AuthContext);
   
   // set states for filter, role and members
   const [loginBody, setLoginBody] = useState({userName: '', password: ''});

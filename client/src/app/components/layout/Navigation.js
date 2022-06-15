@@ -46,7 +46,9 @@ const Navigation = () => {
           </NavItem>
         )}
       </Nav>
-      <UserContextNavigation/>
+      <Nav>
+        <UserContextNavigation/>
+      </Nav>
       </>
   )
 };

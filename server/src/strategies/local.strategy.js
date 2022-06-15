@@ -8,10 +8,10 @@ import { HTTPError } from '../utils';
 
 const localStrategy = () => {
   const queryGetUserByUsername = `
-    query getUserByUsername($username: String!) {
-      member(where: { username: $username }) {
+    query getUserByUsername($userName: String!) {
+      Member(where: { userName: $userName }) {
         id,
-        username,
+        userName,
         email,
         password
       }

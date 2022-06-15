@@ -13,13 +13,13 @@ const AuthProvider = ({children}) => {
     localStorage.setItem(settings.AUTH_KEY_LOCALSTORAGE, JSON.stringify(currentUser));
   }, [currentUser]);
 
-  const signInWithEmailAndPassword = async (email, password) => {
+  const signInWithEmailAndPassword = async (username, password) => {
     try {
-      const response = await fetch('/api/login', {
+      const response = await fetch('http://localhost:8080/api/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          username: email,
+          username: username,
           password: password,
         })
       });
@@ -28,7 +28,7 @@ const AuthProvider = ({children}) => {
         setCurrentUser(user);      
       }      
     } catch (error) {
-      console.log(error);
+      console.log(JSON.parse(error));
     }    
   };
 
