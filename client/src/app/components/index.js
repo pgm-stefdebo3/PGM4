@@ -6,6 +6,7 @@ import Educations from "./curriculum/Educations";
 import SearchResults from "./search";
 import PortfolioComponent from "./portfolio/PortfolioComponent";
 import HomepageComponent from "./HomepageComponent";
+import ServicesComponent from "./ServicesComponent";
 
 export {
   TeamList,
@@ -16,5 +17,6 @@ export {
   Educations,
   SearchResults,
   PortfolioComponent,
-  HomepageComponent
+  HomepageComponent,
+  ServicesComponent
 };

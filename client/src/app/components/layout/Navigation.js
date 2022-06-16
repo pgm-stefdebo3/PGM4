@@ -15,15 +15,20 @@ const routes = [
     path: '/blogs'
   },
   {
+    title: 'Team',
+    type: 'internal',
+    path: '/team'
+  },
+  {
+    title: 'Services',
+    type: 'internal',
+    path: '/services'
+  },
+  {
     title: 'Search',
     type: 'internal',
     path: '/search'
   },
-  {
-    title: 'Team',
-    type: 'internal',
-    path: '/team'
-  }
 ];
 
 const Navigation = () => {

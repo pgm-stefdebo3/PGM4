@@ -7,6 +7,7 @@ import BlogDetailsPage from "./blog-detail.page";
 import PostDetailsPage from "./post-detail.page";
 import LoginPage from "./login.page";
 import SearchPage from "./search.page";
+import ServicesPage from "./services.page";
 
 export {
   PortfolioPage,
@@ -17,5 +18,6 @@ export {
   BlogDetailsPage,
   PostDetailsPage,
   LoginPage,
-  SearchPage
+  SearchPage,
+  ServicesPage
 }

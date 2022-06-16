@@ -19,6 +19,10 @@ query GetHomepageData {
       title
     }
   }
+  services(last: 2) {
+    name
+    description
+  }
 }
 `
 

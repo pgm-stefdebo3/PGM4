@@ -24,6 +24,15 @@ const HomepageComponent = ({data}) => {
             <NavLink to={`/portfolios/${m.id}`} end><p>{`${m.portfolio.firstName} ${m.portfolio.lastName}`}</p></NavLink>
           </div>
         })}
+        <h2>Services</h2>
+        {data.services.map((s) => {
+          return (
+            <div className="service__container">
+              <h3>{s.name}</h3>
+              <p>{s.description}</p>
+            </div>
+          )
+        })}
     </div>
   );
 };
