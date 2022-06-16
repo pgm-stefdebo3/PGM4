@@ -1,10 +1,10 @@
 
 const LearnLine = ({ courses, color }) => {
 
-  const styleContainer = { "background-color": color, "width": "12rem", "height": "5rem", "position": "relative"}
-  const styleEmptyContainer = { "background-color": color, "width": "12rem", "height": "5rem", "opacity": "0.6" }
-  const styleDetails = {"width": "12rem", "padding-left": "1rem", "padding-right": "1rem", "display": "flex", "justify-content": "space-between", "position": "absolute", "bottom": "-0.8rem"}
-  const styleTitle = { "padding-top": "1.6rem" }
+  const styleContainer = { backgroundColor: color, width: "12rem", height: "5rem", position: "relative"}
+  const styleEmptyContainer = { backgroundColor: color, width: "12rem", height: "5rem", opacity: "0.5" }
+  const styleDetails = {width: "12rem", paddingLeft: "1rem", paddingRight: "1rem", display: "flex", justifyContent: "space-between", position: "absolute", bottom: "-0.8rem"}
+  const styleTitle = { paddingTop: "1.6rem" }
 
   let coursesByLearnLine = courses
   for ( let i = 1; i < 9; i += 1) {
@@ -17,7 +17,6 @@ const LearnLine = ({ courses, color }) => {
     }
   }
   coursesByLearnLine.sort(function(a, b){return a.period-b.period})
-  console.log(coursesByLearnLine);
 
 
   return (

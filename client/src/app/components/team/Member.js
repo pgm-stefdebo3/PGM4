@@ -7,7 +7,7 @@ const Member = ({member}) => {
           <ListGroupItem key={ member.id }>
             <img src={member.portfolio.imageUrl} loading="lazy" alt={member.email + " avatar"}/>
             <NavLink to={`/portfolios/${member.id}`} end><h2>{ member.email }</h2></NavLink>
-            <p>{ member.role }</p>
+            <p className={`member--${member.role}`}>{ member.role }</p>
           </ListGroupItem>
     )
   };

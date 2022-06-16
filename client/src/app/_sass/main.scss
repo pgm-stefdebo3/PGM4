@@ -56,3 +56,89 @@ thead th {
 thead th p{
     margin-bottom: 0;
 }
+
+.team__list {
+    margin-top: 2rem;
+}
+
+.form-label{
+    margin: 0.4rem;
+}
+
+.card-header,
+.home__title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #7e57c5;
+}
+
+.home__description {
+    width: 70%;
+    line-height: 1.7;
+    margin-bottom: 3rem;
+}
+
+.homepage h2 {
+    margin-top: 3rem;
+}
+
+.homepage h4 {
+    margin-top: 2rem;
+}
+
+.home--description__container {
+    margin-bottom: 4rem;
+}
+
+.description__link {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 0.6rem 2rem;
+    background-color: #9c88c2;
+    border: 2px solid black;
+}
+
+.description__link:hover {
+    text-decoration: underline;
+}
+
+.container-md {
+    margin-top: 2rem;
+}
+
+.team__list .list-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.team__list .list-group-item {
+    width: 25%;
+    text-align: center;
+}
+
+.team__list .list-group-item p {
+    font-weight: bold;
+}
+
+.member--Student {
+    color: #e6a65e;
+}
+
+.member--Teacher {
+    color: rgb(103, 232, 255);
+}
+
+.team__list .list-group-item h2{
+    font-size: 1.5rem;
+}
+
+.team__list .list-group-item a{
+    text-decoration: none;
+    color: black;
+}
+
+.team__list .list-group-item a:hover{
+    text-decoration: underline;
+}

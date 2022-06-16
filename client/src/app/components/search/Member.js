@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 const Member = ({member}) => {
     return (
           <ListGroupItem key={ member.id }>
-            <NavLink to={`/portfolios/${member.id}`} end><h2>{ member.userName }</h2></NavLink>
+            <NavLink to={`/portfolios/${member.id}`} end><h4>{ member.userName }</h4></NavLink>
             <p>{ `${member.portfolio.firstName} ${member.portfolio.lastName}` }</p>
           </ListGroupItem>
     )

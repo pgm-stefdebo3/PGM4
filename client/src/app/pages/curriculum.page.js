@@ -45,7 +45,7 @@ const CurriculumPage = () => {
 
 return (
   
-  <div style={{ "margin": "0 auto", "width": "max-content", "text-align": "center"}}>
+  <div style={{ margin: "0 auto", width: "max-content", textAlign: "center"}}>
     {
       gqlResultAsJSX()
     }

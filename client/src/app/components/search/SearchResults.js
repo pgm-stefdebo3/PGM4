@@ -25,7 +25,7 @@ useEffect(() => {
   };
 
   return (
-    <div className="team__list">
+    <div className="search__list">
       <SearchBar filterText={filterText} onFilterTextChange={handleOnFilterTextChange}/>
       <SearchResultsList data={filteredData}/>
     </div>

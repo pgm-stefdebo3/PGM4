@@ -46,7 +46,7 @@ return (
     <ul className="leanLineList">
       {uniqueLearnLines.map((l) => {
         const style = { color: l.color.hex}
-        return <li className="learnLine" style={style}>{l.name} ({l.code})</li>
+        return <li className="learnLine" style={style} key={l.id}>{l.name} ({l.code})</li>
       })}
     </ul>
   </div>

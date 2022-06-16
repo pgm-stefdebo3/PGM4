@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 const Blog = ({blog}) => {
   return (
     <ListGroupItem key={ blog.id }>
-      <NavLink to={`/blogs/${blog.id}`} end><h2>{ blog.name }</h2></NavLink>
+      <NavLink to={`/blogs/${blog.id}`} end><h4>{ blog.name }</h4></NavLink>
         <p>{ blog.description }</p>
     </ListGroupItem>
   )

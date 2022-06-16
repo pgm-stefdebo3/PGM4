@@ -8,6 +8,7 @@ query GetSearchData {
   blogs {
     id
     name
+    description
   }
   members {
     id

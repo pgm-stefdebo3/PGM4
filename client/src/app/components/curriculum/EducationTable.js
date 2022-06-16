@@ -5,7 +5,7 @@ const EducationTable = ({ courses, learnLines }) => {
   const coursesClone = [...courses]
   
 return (
-  <div className="education__table" style={{ "text-align": "center", "font-weight": "bold"}}>
+  <div className="education__table" style={{ textAlign: "center", fontWeight: "bold"}}>
     <Table>
     <thead>
       <tr>
