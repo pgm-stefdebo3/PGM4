@@ -35,15 +35,6 @@ query GetAuthUsers {
     return body;
   }
 
-  const getTags = (tags, n = 1) => {
-    const tagsCopy = [...tags];
-    const tagsToBeInsertedIntoPost = [];
-    while (tagsToBeInsertedIntoPost.length < n) {
-      tagsToBeInsertedIntoPost.push(...tagsCopy.splice(generateValueBetweenMinAndMax(0, tagsCopy.length - 1), 1));
-    }
-    return tagsToBeInsertedIntoPost;
-  }
-
   /*
    * Create a Community (Local Provider)
   */

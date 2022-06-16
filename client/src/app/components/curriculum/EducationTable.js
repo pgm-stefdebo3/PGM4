@@ -1,10 +1,12 @@
+import { Table } from "reactstrap";
 import LearnLine from "./LearnLine";
 const EducationTable = ({ courses, learnLines }) => {
 
   const coursesClone = [...courses]
   
 return (
-  <div className="education__table">
+  <div className="education__table" style={{ "text-align": "center", "font-weight": "bold"}}>
+    <Table>
     <thead>
       <tr>
         <th colSpan={4}>
@@ -70,6 +72,7 @@ return (
       })
       }
     </tbody>
+    </Table>
   </div>
 )
 };

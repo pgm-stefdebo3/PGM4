@@ -43,3 +43,16 @@ $headings-font-family: 'Ubuntu', sans-serif;
     background-color: black;
     color: white;
 }
+
+thead tr {
+    margin: 1rem;
+}
+
+thead th {
+    background-color: #7e57c5;
+    margin: 0.1rem;
+}
+
+thead th p{
+    margin-bottom: 0;
+}

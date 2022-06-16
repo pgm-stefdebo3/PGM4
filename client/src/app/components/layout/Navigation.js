@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 import { NavLink as RRNavLink } from 'react-router-dom';
-import { NavbarText, Nav, NavItem, NavLink } from 'reactstrap';
+import { Nav, NavItem, NavLink } from 'reactstrap';
 import UserContextNavigation from '../auth/UserContextNavigation';
 
 const routes = [
@@ -15,14 +15,9 @@ const routes = [
     path: '/blogs'
   },
   {
-    title: 'Portfolio',
+    title: 'Search',
     type: 'internal',
-    path: '/portfolio'
-  },
-  {
-    title: 'WPL',
-    type: 'internal',
-    path: '/workplacelearning'
+    path: '/search'
   },
   {
     title: 'Team',

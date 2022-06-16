@@ -2,7 +2,9 @@ import { TeamList } from "../components";
 
 const TeamPage = () => {
   return (
-    <TeamList/>
+    <div className="container-md">
+      <TeamList/>
+    </div>
   )
 };
 

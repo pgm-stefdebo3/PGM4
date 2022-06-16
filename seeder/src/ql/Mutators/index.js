@@ -6,6 +6,7 @@ import mutationCreateEducation from "./createEducation";
 import mutationCreateSpecialisation from "./createSpecialisation";
 import mutationCreateLearnLine from "./createLearnLine";
 import mutationCreateCourse from "./createCourse";
+import mutationCreateProject from "./createProject";
 
 export { 
   mutationCreateMember,
@@ -16,4 +17,5 @@ export {
   mutationCreateSpecialisation,
   mutationCreateLearnLine,
   mutationCreateCourse,
+  mutationCreateProject
 };

@@ -2,7 +2,7 @@ import faker from '@faker-js/faker';
 import client from './graphql_client';
 import { htmlToSlateAST } from '@graphcms/html-to-slate-ast';
 import { generateValueBetweenMinAndMax, generateTimestamps } from './utils';
-import { mutationCreateMember, mutationCreatePortfolio } from './ql/Mutators';
+import { mutationCreateMember, mutationCreatePortfolio, mutationCreateProject } from './ql/Mutators';
 
 (async () => {
 
@@ -22,6 +22,7 @@ import { mutationCreateMember, mutationCreatePortfolio } from './ql/Mutators';
     try {
       const { createPortfolio } = await client.request(mutationCreatePortfolio, { firstname, lastname, about, imageUrl });
       const { createMember } = await client.request(mutationCreateMember, { email, userName, password, role, portfolioId: createPortfolio.id });
+      const projects = createProjects(faker.datatype.number({min: 1, max: 6}), createMember.id)
 
       if (!createMember) {
         throw new Error(`Can't create the user with username ${createMember.email}!`);
@@ -32,9 +33,25 @@ import { mutationCreateMember, mutationCreatePortfolio } from './ql/Mutators';
       console.log(error);
     }
   };
+  /*
+   * Create a User (Local Provider)
+  */
+  const createProject = async ({ name, imageUrl, description, memberId}) => {
+    try {
+      const { createProject } = await client.request(mutationCreateProject, { name, imageUrl, description, memberId });
+
+      if (!createProject) {
+        throw new Error(`Can't create the user with username ${createProject.name}!`);
+      }
+
+      console.log(`Project created with name ${createProject.name}!`)
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   /*
-   * Create a Users via promises
+   * Create Users via promises
   */
   const createUsers = async (n = 20) => {
     const promises = [];
@@ -49,6 +66,19 @@ import { mutationCreateMember, mutationCreatePortfolio } from './ql/Mutators';
     }
     return await Promise.all(promises);
   };
+
+  /*
+   * Create projects via promises
+  */
+  const createProjects = async (n = 1, memberId) => {
+    const promises = [];
+    for (let i=0; i < n;i++) {
+      promises.push(await createProject({ name: faker.lorem.word(), imageUrl: faker.image.imageUrl(), description: faker.lorem.paragraph(), memberId}));
+    }
+    return await Promise.all(promises);
+  };
+
+
 
   /*
    * Create Models in Auth

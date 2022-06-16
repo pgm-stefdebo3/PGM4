@@ -16,13 +16,13 @@ import App from './app';
 import { 
   PortfolioPage,
   HomePage,
-  WorkPlaceLearningPage,
   CurriculumPage,
   TeamPage,
   BlogsPage,
   BlogDetailsPage,
   PostDetailsPage,
-  LoginPage
+  LoginPage,
+  SearchPage
 } from './app/pages';
 import { AuthProvider, GraphCMSProvider } from './app/context';
 import { PublicLayout } from './app/components/layout';
@@ -36,9 +36,9 @@ ReactDOM.render(
             <Route path="/" element={<PublicLayout />}>
               <Route index element={<HomePage />} />
               <Route path="/auth/login" element={<LoginPage />} />
+              <Route path="search" element={<SearchPage />} />
               <Route path="curriculum" element={<CurriculumPage />} />
-              <Route path="portfolio" element={<PortfolioPage />} /> 
-              <Route path="workplacelearning" element={<WorkPlaceLearningPage />} /> 
+              <Route path="portfolios/:memberId" element={<PortfolioPage />} />
               <Route path="team" element={<TeamPage />} /> 
               <Route path="blogs" element={<BlogsPage />} />
               <Route path="blogs/:blogId" element={<BlogDetailsPage />}/>

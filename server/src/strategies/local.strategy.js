@@ -6,12 +6,15 @@ import fetch from 'node-fetch';
 import settings from '../config/settings';
 import { HTTPError } from '../utils';
 
+console.log('POLO');
+console.log(settings);
+
 const localStrategy = () => {
   const queryGetUserByUsername = `
-    query getUserByUsername($userName: String!) {
-      Member(where: { userName: $userName }) {
+    query getUserByUsername($username: String!) {
+      authUser(where: { username: $username }) {
         id,
-        userName,
+        username,
         email,
         password
       }
@@ -34,15 +37,18 @@ const localStrategy = () => {
       passwordField: 'password',
     },
     async (username, password, done) => {
-      try {  
-        const { member:authUser } = await client.request(queryGetUserByUsername, { username });
+      try {
+        const data = await client.request(queryGetUserByUsername, { username });
+        console.log(data);
+        
+        const { authUser } = await client.request(queryGetUserByUsername, { username });
 
         if (!authUser) {
-          throw new HTTPError('User does no exists', 469);
+          throw new HTTPError('User does no exists', 404);
         }
 
         if (password !== authUser.password) {
-          throw new HTTPError('Incorrect Credentials', 469);
+          throw new HTTPError('Incorrect Credentials', 404);
         }
 
         done(null, authUser);

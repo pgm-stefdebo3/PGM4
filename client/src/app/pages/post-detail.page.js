@@ -49,11 +49,11 @@ const PostDetailsPage = () => {
   }
 
   return (
-    <>
+    <div className="container-md">
       {
         gqlResultAsJSX()
       }
-    </>
+    </div>
   )
 };
 

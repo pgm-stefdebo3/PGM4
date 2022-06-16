@@ -2,11 +2,19 @@ import TeamList from "./team";
 import Curriculum from "./curriculum";
 import { BlogDetailsComponent, PostDetailsComponent } from "./blogs";
 import LoginForm from "./LoginForm";
+import Educations from "./curriculum/Educations";
+import SearchResults from "./search";
+import PortfolioComponent from "./portfolio/PortfolioComponent";
+import HomepageComponent from "./HomepageComponent";
 
 export {
   TeamList,
   Curriculum,
   BlogDetailsComponent,
   PostDetailsComponent,
-  LoginForm
+  LoginForm,
+  Educations,
+  SearchResults,
+  PortfolioComponent,
+  HomepageComponent
 };

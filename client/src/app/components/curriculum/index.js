@@ -1,3 +1,3 @@
-import Curriculum from "./Curriculum";
+import Educations from "./Educations";
 
-export default Curriculum;
+export default Educations;

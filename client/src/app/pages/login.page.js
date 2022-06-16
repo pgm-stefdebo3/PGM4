@@ -25,8 +25,10 @@ const LoginPage = () => {
   // return searchbar with filterText and filterRole, also link functions with each other
   // return MembersList with filtered members
 return (
+  <div className="container-md">
   <div className="team__list">
     <LoginForm password={loginBody.password} email={loginBody.email} onUserNameChange={handleOnUserNameChange} onPasswordChange={handleOnPasswordChange} handleOnButtonClick={handleOnButtonClick}/>
+  </div>
   </div>
 )
 };
