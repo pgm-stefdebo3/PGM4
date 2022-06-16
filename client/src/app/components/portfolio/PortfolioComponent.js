@@ -22,7 +22,7 @@ const PortfolioComponent = ({member}) => {
   return (
     <div className="container-md">
       <h2>Hi i am {`${member.portfolio.firstName} ${member.portfolio.lastName}`}</h2>
-      <img src={member.portfolio.imageUrl}  style={{filter: "invert(100%) hue-rotate(180deg)"}} alt={`${member.portfolio.firstName} portfolio`}/>
+      <img src={member.portfolio.imageUrl} alt={`${member.portfolio.firstName} portfolio`}/>
       <div className="" dangerouslySetInnerHTML={{ __html: member.portfolio.about.html }}/>
       <h3>Contact me at {member.email}</h3>
       <h3>Projects:</h3>
