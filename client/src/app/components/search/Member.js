@@ -1,7 +1,7 @@
 import { ListGroupItem } from "reactstrap";
 import { NavLink } from "react-router-dom";
 
-// basic <ListGroupItem/> with member his avatar, email and role
+// basic <ListGroupItem/> with member his userName, name and NavLink
 const Member = ({member}) => {
     return (
           <ListGroupItem key={ member.id }>

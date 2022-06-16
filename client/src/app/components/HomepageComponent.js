@@ -27,7 +27,7 @@ const HomepageComponent = ({data}) => {
         <h2>Services</h2>
         {data.services.map((s) => {
           return (
-            <div className="service__container">
+            <div className="service__container" key={s.id}>
               <h3>{s.name}</h3>
               <p>{s.description}</p>
             </div>

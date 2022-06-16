@@ -18,6 +18,7 @@ query GetAllBlogs {
 }
 `;
 
+// returns a blogList consisting of all existing Blogs
 const BlogsList = () => {
   const { loading, error, data } = useQuery(GET_ALL_BLOGS);
 

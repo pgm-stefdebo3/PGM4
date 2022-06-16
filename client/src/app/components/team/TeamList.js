@@ -26,7 +26,6 @@ const TeamList = () => {
   const gqlResultAsJSX = () => {
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error...</p>;
-    console.log(data.members);
 
     return (
       <FilteredTeamList member={data.members}/>

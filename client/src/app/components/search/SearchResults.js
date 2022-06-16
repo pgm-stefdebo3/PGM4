@@ -4,11 +4,11 @@ import SearchResultsList from "./SearchResultsList";
 
 const SearchResults = ({data}) => {
 
-  // set states for filter, role and members
+  // set states for filterText and filterData
   const [filterText, setFilterText] = useState('');
   const [filteredData, setFilteredData] = useState(data);
 
-// Filter members, blogs and  by name and role on mount, mounts every time members, filterText or filterRole changes
+// Filter members, blogs and posts by name on mount, mounts every time data or filterText changes
 useEffect(() => {
   let d = {...data};
   d.members = d.members.filter((m) => `${m.portfolio.firstName.toLowerCase()} ${m.portfolio.lastName.toLowerCase()}`.includes(filterText.toLowerCase())|| m.userName.toLowerCase().indexOf(filterText.toLowerCase()) > -1)

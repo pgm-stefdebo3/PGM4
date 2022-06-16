@@ -3,12 +3,15 @@ import { useEffect, useState } from "react";
 import SearchBar from "./SearchBar";
 import FilteredProjects from "./FilteredProjects";
 
+
+// holds states for filterText(searchbar value) and filteredProjects (return value)
+// returns a searchbar to filter and the filteredProjects in a list
 const PortfolioComponent = ({member}) => {
   const [filterText, setFilterText] = useState('');
   const [filteredProjects, setFilteredProjects] = useState(member.projects);
   
 
-  // Filter members by name and role on mount, mounts every time members, filterText or filterRole changes
+  // Filter projects by name and description on mount, mounts every time member or filterText changes
   useEffect(() => {
     let p = member.projects.filter(p => p.name.toLowerCase().includes(filterText.toLowerCase()) || p.description.toLowerCase().includes(filterText.toLowerCase()))
     setFilteredProjects(p)

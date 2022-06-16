@@ -1,6 +1,7 @@
 import { ListGroupItem } from "reactstrap";
 import { NavLink } from "react-router-dom";
 
+// basic <ListGroupItem/> with post its title and NavLink
 const Post = ({post}) => {
   return (
     <ListGroupItem key={ post.id }>

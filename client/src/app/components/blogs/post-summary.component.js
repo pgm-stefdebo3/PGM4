@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 
+// returns a single post without details, with NavLink to detailPage
 const PostSummaryComponent = ({post}) => {
   return (
     <div className="post-summary">

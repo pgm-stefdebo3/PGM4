@@ -20,6 +20,7 @@ query GetHomepageData {
     }
   }
   services(last: 2) {
+    id
     name
     description
   }

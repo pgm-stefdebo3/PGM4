@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 
+// return a post detail component consisting of the title, description, body and link back to the blog its from
 const PostDetailsComponent = ({post}) => {
-  console.log(post);
   return (
     <div className="post-details">
       <NavLink to={`/blogs/${post.blog.id}`} end><h2> return to {post.blog.name}</h2></NavLink>

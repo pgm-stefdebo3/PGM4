@@ -5,7 +5,8 @@ import Post from "./Post";
 
 const SearchResultsList = ({data}) => {
 
-
+// returns conditional rendering, (if there are members, blogs or posts return the header and the items.)
+// calls to <Member/>, <Blog/> and <Post/>
   return (
     <>
       { data.members.length > 0 ?
@@ -14,7 +15,7 @@ const SearchResultsList = ({data}) => {
           members
         </div>
         <ListGroup>
-          {data.members.map(member => <Member member={member}/>)}
+          {data.members.map(member => <Member key={member.id} member={member}/>)}
         </ListGroup>
       </div> 
       :
@@ -27,7 +28,7 @@ const SearchResultsList = ({data}) => {
           Blogs
         </div>
         <ListGroup>
-          {data.blogs.map(blog => <Blog blog={blog}/>)}
+          {data.blogs.map(blog => <Blog key={blog.id} blog={blog}/>)}
         </ListGroup>
       </div> 
       :
@@ -40,7 +41,7 @@ const SearchResultsList = ({data}) => {
           Posts
         </div>
         <ListGroup>
-          {data.posts.map(post => <Post post={post}/>)}
+          {data.posts.map(post => <Post key={post.id} post={post}/>)}
         </ListGroup>
       </div> 
       :

@@ -39,14 +39,13 @@ const Education = ({education}) => {
   // return all unique specs to filter on
   // return current courses
 return (
-  <div className="education">
+  <div className="education" key={education.id}>
     <h2>{education.name}</h2>
     <SpecialisationsFilter specialisations={uniqueSpecs} onFilterSpecialisationChange={handleOnFilterSpecialisationChange} filterSpecialisation={filterSpecialisation}/>
-    <EducationTable courses={filteredCourses} learnLines={uniqueLearnLines}/>
+    <EducationTable courses={filteredCourses} learnLines={uniqueLearnLines} schoolYear={education.schoolYear}/>
     <ul className="leanLineList">
       {uniqueLearnLines.map((l) => {
-        const style = { color: l.color.hex}
-        return <li className="learnLine" style={style} key={l.id}>{l.name} ({l.code})</li>
+        return <li className="learnLine" style={{ color: l.color.hex}} key={l.id}>{l.name} ({l.code})</li>
       })}
     </ul>
   </div>

@@ -30,9 +30,8 @@ query GetAPost( $id: ID! ) {
 const PostDetailsPage = () => {
   // get id out of url parameters
   const { postId } = useParams();
-  console.log(postId);
 
-  // use query to get the right blog
+  // use query to get the right post
   const { loading, error, data } = useQuery(GET_A_POST, {
     variables: {
       id: postId

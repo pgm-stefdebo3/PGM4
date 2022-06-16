@@ -26,8 +26,6 @@ query GetSearchData {
 `
 
 const SearchPage = () => {
-
-  // use query to get the right blog
   const { loading, error, data } = useQuery(GET_SEARCH_DATA)   
 
   

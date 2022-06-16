@@ -1,19 +1,20 @@
 import { Table } from "reactstrap";
 import LearnLine from "./LearnLine";
-const EducationTable = ({ courses, learnLines }) => {
+const EducationTable = ({ courses, learnLines, schoolYear }) => {
 
   const coursesClone = [...courses]
   
+// returns hardcoded tableHeader(except for schoolYears), with in the tableBody a map function which maps learnLines to reference <LearnLine/>
 return (
   <div className="education__table" style={{ textAlign: "center", fontWeight: "bold"}}>
     <Table>
     <thead>
       <tr>
         <th colSpan={4}>
-          <p>2021–2022</p>
+          <p>{`${schoolYear}-${schoolYear + 1}`}</p>
         </th>
         <th colSpan={4}>
-          <p>2022–2023</p>
+          <p>{`${schoolYear + 1}-${schoolYear + 2}`}</p>
         </th>
       </tr>
       <tr >
@@ -68,7 +69,7 @@ return (
     <tbody>
       {
         learnLines.map((l) => {
-          return <LearnLine courses={coursesClone.filter(c => c.learnLine.name === l.name)} color={l.color.hex}/>
+          return <LearnLine courses={coursesClone.filter(c => c.learnLine.name === l.name)} key={l.id} color={l.color.hex}/>
       })
       }
     </tbody>
