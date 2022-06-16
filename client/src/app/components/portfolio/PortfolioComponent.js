@@ -11,8 +11,6 @@ const PortfolioComponent = ({member}) => {
   // Filter members by name and role on mount, mounts every time members, filterText or filterRole changes
   useEffect(() => {
     let p = member.projects.filter(p => p.name.toLowerCase().includes(filterText.toLowerCase()) || p.description.toLowerCase().includes(filterText.toLowerCase()))
-    console.log(p);
-    console.log(filterText);
     setFilteredProjects(p)
   }, [member , filterText]);
 
@@ -24,7 +22,7 @@ const PortfolioComponent = ({member}) => {
   return (
     <div className="container-md">
       <h2>Hi i am {`${member.portfolio.firstName} ${member.portfolio.lastName}`}</h2>
-      <img src={member.portfolio.imageUrl} alt={`${member.portfolio.firstName} portfolio`}/>
+      <img src={member.portfolio.imageUrl}  style={{filter: "invert(100%) hue-rotate(180deg)"}} alt={`${member.portfolio.firstName} portfolio`}/>
       <div className="" dangerouslySetInnerHTML={{ __html: member.portfolio.about.html }}/>
       <h3>Contact me at {member.email}</h3>
       <h3>Projects:</h3>
